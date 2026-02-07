@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna Mahajan | Elite Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;--card:#111827;--text:#e5e7eb;--accent:#22d3ee;--accent2:#a78bfa;
+    }
+    body.light{
+      --bg:#f8fafc;--card:#ffffff;--text:#0f172a;--accent:#2563eb;--accent2:#9333ea;
+    }
+    *{box-sizing:border-box;font-family:'Poppins',sans-serif;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);transition:.4s}
+    nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;gap:1rem;
+      background:rgba(0,0,0,.4);backdrop-filter:blur(12px);z-index:1000}
+    nav a,nav button{color:var(--text);padding:1rem;border:none;background:none;font-weight:500;cursor:pointer}
+    nav a:hover,nav button:hover{color:var(--accent)}
+    header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    header h1{font-size:4rem;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}
+    header h2{margin-top:1rem;font-weight:400;opacity:.9}
+    section{padding:6rem 10%}
+    h3{text-align:center;font-size:2.7rem;margin-bottom:3rem;color:var(--accent)}
+    .card{background:var(--card);border-radius:20px;padding:2.5rem;margin-bottom:2rem;
+      box-shadow:0 30px 80px rgba(0,0,0,.4);transition:.4s}
+    .card:hover{transform:translateY(-12px) scale(1.02)}
+    .timeline{position:relative;margin-left:20px}
+    .timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--accent),var(--accent2))}
+    .event{margin-left:40px;margin-bottom:2rem}
+    .event span{color:var(--accent);font-weight:600}
+    .badges{text-align:center}
+    footer{text-align:center;padding:3rem;opacity:.8}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#contact">Contact</a>
+  <button id="toggle">🌙</button>
+</nav>
+<header>
+  <h1>Krishna Mahajan</h1>
+  <h2>Chemical Engineering @ IIT Guwahati<br>Minor in Data Science & AI</h2>
+</header>
+<section id="badges">
+  <h3>Live Profiles</h3>
+  <div class="card badges">
+    <img src="https://img.shields.io/badge/LinkedIn-Krishna%20Mahajan-blue?logo=linkedin&style=for-the-badge"><br><br>
+    <img src="https://codeforces-readme-stats.vercel.app/api/badge?username=krishna4052104">
+  </div>
+</section>
+<section id="about"><h3>About Me</h3><div class="card">First-year undergraduate at IIT Guwahati exploring the intersection of engineering, data science, finance, and product strategy. Driven by problem-solving and high-impact innovation.</div></section>
+<section id="education"><h3>Education Timeline</h3><div class="card timeline">
+  <div class="event"><span>2025–Present</span> — B.Tech Chemical Engineering, IIT Guwahati (CGPA 9.66)</div>
+  <div class="event"><span>2025–Present</span> — Minor in Data Science & AI</div>
+  <div class="event"><span>2025</span> — Senior Secondary, JK Board (96%)</div>
+  <div class="event"><span>2023</span> — Secondary, CBSE (98%)</div>
+</div></section>
+<section id="projects"><h3>Projects</h3><div class="card">Product strategy for ShareChat/Moj (PMx Udgam) & Trading Strategy development with Finance Club IITG.</div></section>
+<section id="skills"><h3>Skills</h3><div class="card">C++, Python | Linear Algebra, Calculus, Data Science Foundations | DSA | MS Office</div></section>
+<section id="achievements"><h3>Achievements</h3><div class="card timeline">
+  <div class="event"><span>2026</span> — Associate, Alcheringa IITG</div>
+  <div class="event"><span>2025</span> — JEE Advanced Top 3%</div>
+  <div class="event"><span>2025</span> — JEE Mains 99.78 Percentile</div>
+  <div class="event"><span>2024</span> — NSEC Chemistry, State Top 1%</div>
+</div></section>
+<section id="contact"><h3>Contact</h3><div class="card">📧 krishna4052104@gmail.com<br>📍 Jammu, India</div></section>
+<footer>© 2026 Krishna Mahajan • Elite Portfolio</footer>
+<script>
+const t=document.getElementById('toggle');let d=true;
+t.onclick=()=>{document.body.classList.toggle('light');d=!d;t.textContent=d?'🌙':'☀️'}
+</script>
+</body>
+</html>
